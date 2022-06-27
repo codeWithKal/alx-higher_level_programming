@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-gcc $PYFILE -o $PYFILEc
+gcc $PYFILE - o f"{$PYFILE}c"
