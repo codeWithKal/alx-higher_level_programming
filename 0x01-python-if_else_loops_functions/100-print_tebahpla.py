@@ -9,4 +9,3 @@ while i >= 97:
     if zigzag == "odd":
         i = i + 32
     i = i - 1
-
