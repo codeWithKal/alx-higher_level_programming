@@ -1,4 +1,4 @@
-a#!/usr/bin/python3
+#!/usr/bin/python3
 def infAdd(argv):
     le = len(argv) - 1
     sum = 0
