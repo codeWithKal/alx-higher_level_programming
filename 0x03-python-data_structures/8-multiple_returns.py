@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/usr/bin/python3
 def multiple_returns(sentence):
     str_len = len(sentence)
     if len(sentence) <= 0:
