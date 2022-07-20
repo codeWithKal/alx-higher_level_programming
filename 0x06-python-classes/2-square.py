@@ -7,7 +7,7 @@ Date: July 20 2022
 """
 
 
-def __init__(self, size=0):
+class Square():
     """
     This class contains a definition of single
     private object called size, which is non negeive integer.
