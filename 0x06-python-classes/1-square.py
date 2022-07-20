@@ -13,4 +13,4 @@ class Square():
     This class can be initialized to an square object with its own 'size'
     """
     def __init__(self, size):
-        self.size = size
+        self.__size = size
