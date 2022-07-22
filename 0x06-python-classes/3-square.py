@@ -22,11 +22,11 @@ class Square():
                 raise ValueError("size must be >= 0")
             self.__size = size
         else:
-            rase TypeError("size must be an integer")
+            raise TypeError("size must be an integer")
 
     def area(self):
         """
-        this method square the value passed as size to the object"
+        this method square the value passed as size to the objectl
         """
 
         return(self.__size ** 2)
