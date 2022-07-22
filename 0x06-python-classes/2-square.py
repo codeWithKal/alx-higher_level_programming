@@ -13,7 +13,7 @@ class Square():
     private object called size, which is non negeive integer.
     """
 
-    def __init__(self, size):
+    def __init__(self, size=0):
         if isinstance(size, int):
             if size < 0:
                 raise ValueError("size must be >= 0")
