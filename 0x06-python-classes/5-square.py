@@ -24,6 +24,9 @@ class Square():
 
     @self.setter
     def size(self, value):
+        """
+        setter method
+        """
         if isinstance(value, int):
             if value < 0:
                 raise ValueError("size must be >=0")
