@@ -114,4 +114,3 @@ class Rectangle():
                 raise TypeError("rect_1 must be an instance of Rectangle")
             else:
                 raise TypeError("rect_2 must be an instance of Rectangel")
-
