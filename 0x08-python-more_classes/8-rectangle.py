@@ -103,7 +103,18 @@ class Rectangle():
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
 
+    @staticmethod
     def bigger_or_equal(rect_1, rect_2):
+        """
+        computes the two objects passed to it
+
+        args:
+            rect_1: the first rectangle
+            rect_2: the second rectangle
+
+        Returns:
+            Rectangle: The biggest rectangle based on the area
+        """
         if (isinstance(rect_1, Rectangle) and isinstance(rect_2, Rectangle)):
             if rect_1.area() >= rect_2.area():
                 return(rect_1)
