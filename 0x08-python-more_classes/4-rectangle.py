@@ -1,0 +1,93 @@
+#!/usr/bin/python3
+"""
+File: 1-rectangle.py
+Desc: a module containing a class for defining a rectangle with
+    width and height.
+Author: Kaleab Shiferaw Girma
+Date: July 25 2022
+"""
+
+
+class Rectangle():
+    """
+    a class containg getter and setter methods for height and width attribute
+    of the class
+    """
+    def __init__(self, width=0, height=0):
+        """
+        initializer method
+        """
+        self.width = width
+        self.height = height
+
+    @property
+    def height(self):
+        """
+        getter method for height attribute
+        """
+        return(self.__height)
+
+    @height.setter
+    def height(self, value):
+        """
+        a setter method for height attribute a class
+        """
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("height must be >= 0")
+            self.__height = value
+        else:
+            raise TypeError("height must be an integer")
+
+    @property
+    def width(self):
+        """
+        a getter method for width attribute
+        """
+        return(self.__width)
+
+    @width.setter
+    def width(self, value):
+        """
+        a setter method for width attribute of a rectangle class
+        """
+        if isinstance(value, int):
+            if value < 0:
+                raise ValueError("width must be >= 0")
+            self.__width = value
+        else:
+            raise TypeError("width must be an integer")
+
+    def area(self):
+        """
+        computes an area of a rectangle
+        """
+        return(self.__width * self.__height)
+
+    def perimeter(self):
+        """
+        computes the perimeter of a rectangle
+        """
+        if self.__width == 0 or self.__height == 0:
+            return(0)
+        return(2 * (self.__width + self.__height))
+
+    def __str__(self):
+        """
+        a str method for printing a rectangle with #
+        """
+        rectangle = ""
+        if self.__width == 0 or self.__height == 0:
+            return rectangle
+        else:
+            row = "#" * self.__width + '\n'
+            for i in range(self.__height - 1):
+                rectangle += row
+            rectangle += "#" * self.__width
+            return rectangle
+
+    def __repr__(self):
+        """
+        a method for representing an instance in string
+        """
+        return ("Rectangle({:d}, {:d})".format(self.__width, self.__height))
