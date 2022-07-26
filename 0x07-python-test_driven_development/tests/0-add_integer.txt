@@ -1,0 +1,71 @@
+========================================================
+                                                       =
+		Generating test case for 0th task      =
+						       =
+========================================================
+
+
+*********************************************************
+							*
+File: 0-add_integer.txt					*
+Description: file containging the most possible test 	*
+	cases.						*
+Author: Kaleab Shiferaw Girma				*
+Date: July 26 2022					*
+*********************************************************
+
+>>> add_integer = __import__('0-add_integer').add_integer
+
+the following are tests for integer and float datatype
+assuming that the two arguments are still passed to the
+method.
+
+
+>>> add_integer(1, 2)
+3
+>>> add_integer(2.3, 5)
+7
+>>> add_integer(2.2, 9.4)
+11
+>>> add_integer(-2, 5)
+3
+>>> add_integer(-2, -3)
+-5
+>>> add_integer(0, -2.8)
+-2
+>>> add_integer(1.5, -1.5)
+0
+
+
+let's add a test for the module by only providing argument
+a as argument b have already defined in the default
+
+>>> add_integer(3)
+101
+>>> add_integer(0)
+98
+
+lets pass a non-integer parameter to the method now.
+
+
+>>> add_integer(4, "kaleab shiferaw")
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+>>> add_integer("isMyName", 8)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer([])
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer(None, None)
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+>>> add_integer (45, None)
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
+
