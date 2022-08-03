@@ -15,4 +15,6 @@ class MyList(list):
         """
         this method prints a sorted version of a list passed to it
         """
-        print(sorted(self))
+        sorted_list = sorted(self)
+        print(sorted_list)
+        del sorted_list
