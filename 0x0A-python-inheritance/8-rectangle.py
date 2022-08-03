@@ -1,6 +1,5 @@
 #!/usr/bin/python3
-from 7-base_geometry import BaseGeometry
-
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
 """
 File: 8-rectangle.py
 Desc: a module containing a class Rectangle that inherits.
