@@ -1,0 +1,10 @@
+>>> Mylist = __import__('1-my_list').MyList
+
+>>> x = MyList()
+>>> type(x)
+<class '1-my_list.MyList'>
+>>> isinstance(MyList, list)
+False
+>>> issubclass(MyList, list)
+True
+
