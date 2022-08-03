@@ -6,10 +6,12 @@ Description: a module containing a method checkes wheather
 Author: Kaleab Shiferaw Girma
 Date: August 3 2022
 """
+
+
 def is_same_class(obj, a_class):
     """
     checkes if a given object is an instance of a class
-    
+
     Args:
         obj(any): an object to be checked
         a_class(any): a class to be checked against
