@@ -125,7 +125,7 @@ class Rectangle(Base):
         h_val = '#' * self.width
         print('\n' * self.y, end='')
         print('{:s}{:s}\n'.format(h_off, h_val) * self.height, end='')
-        
+
     def __str__(self):
         """
         an overridded __str__ method
@@ -135,3 +135,31 @@ class Rectangle(Base):
         """
         args = (self.id, self.x, self.y, self.width, self.height)
         return "[Rectangle] ({:d}) {:d}/{:d} - {:d}/{:d}".format(*args)
+
+    def update(self, *args, **kwargs):
+        """Updates the attributes of this polygon.
+        Args:
+            args (tuple): A tuple of non-keyword arguments.
+            kwargs (dict): A dictionary of keyword arguments.
+        """
+        attrs = ('id', 'width', 'height', 'x', 'y')
+        for key, val in zip(attrs, args):
+            setattr(self, key, val)
+        if (type(args) is None or len(args) == 0) and (type(kwargs) is dict):
+            for key, val in kwargs.items():
+                if key in attrs:
+                    setattr(self, key, val)
+
+    def to_dictionary(self):
+        """Creates a dictionary representation of this polygon.
+        Returns:
+            dict: A dictionary representation of this polygon.
+        """
+        res = {
+            'id': self.id,
+            'width': self.width,
+            'height': self.height,
+            'x': self.x,
+            'y': self.y
+        }
+        return res
