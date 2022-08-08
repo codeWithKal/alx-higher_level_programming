@@ -121,11 +121,11 @@ class Rectangle(Base):
         """
         a method that prints a rectangle with a character of '#'.
         """
-        for i in range(width):
-            for j in range(height):
-                print("#", end="")
-            print()
-
+        h_off = ' ' * self.x
+        h_val = '#' * self.width
+        print('\n' * self.y, end='')
+        print('{:s}{:s}\n'.format(h_off, h_val) * self.height, end='')
+        
     def __str__(self):
         """
         an overridded __str__ method
