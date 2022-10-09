@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-'''Prints all State objects in a database.
+'''Prints the first State object in a database.
 '''
 import sys
 from sqlalchemy import create_engine
@@ -19,6 +19,8 @@ if __name__ == '__main__':
         engine = create_engine(DATABASE_URL)
         Base.metadata.create_all(engine)
         session = sessionmaker(bind=engine)()
-        result = session.query(State).all()
-        for res in result:
-            print('{}: {}'.format(res.id, res.name))
+        result = session.query(State).first()
+        if result is not None:
+            print('{}: {}'.format(result.id, result.name))
+        else:
+            print('Nothing')
