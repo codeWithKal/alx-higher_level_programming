@@ -1,3 +1,3 @@
 #!/bin/bash
-# Sends a POST request to a given URL, and displays the body of the response
-curl -sL -X POST -H 'Content-Type: application/json' -d "$([ -f "$2" ] && cat "$2")" "$1"
+# Follows a URL for it to respond with "You got me!"
+curl -s -X PUT -H 'Origin: HolbertonSchool' -L --max-redirs -1 -d "user_id=98" "0.0.0.0:5000/catch_me"
