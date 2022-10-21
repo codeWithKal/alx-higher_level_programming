@@ -4,7 +4,7 @@ File: 3-error_code.py
 Description: a script that handles an HttpError
 Author: Kaleab shiferaw Girma
 """
-from urllib import request
+from urllib import request, error
 import sys
 
 if __name__ == "__main__":
@@ -13,5 +13,5 @@ if __name__ == "__main__":
         try:
             with urllib.request.urlopen(url) as data:
                 print(data.read().decode('utf-8'))
-        except Exception as e:
+        except error.HTTPError as e:
             print("Error code: {}".format(e.code()))
