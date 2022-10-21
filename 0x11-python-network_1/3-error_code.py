@@ -11,7 +11,7 @@ if __name__ == "__main__":
     if len(sys.argv) > 1:
         url = sys.argv[1]
         try:
-            with urllib.request.urlopen(url) as data:
+            with request.urlopen(url) as data:
                 print(data.read().decode('utf-8'))
         except error.HTTPError as e:
             print("Error code: {}".format(e.code))
